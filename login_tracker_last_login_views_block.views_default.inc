@@ -14,7 +14,7 @@ function login_tracker_last_login_views_block_views_default_views() {
   $view->name = 'last_login';
   $view->description = '';
   $view->tag = 'default';
-  $view->base_table = 'login_tracker';
+  $view->base_table = 'users';
   $view->human_name = 'Last login';
   $view->core = 7;
   $view->api_version = '3.0';
@@ -35,13 +35,25 @@ function login_tracker_last_login_views_block_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Login tracker: Login timestamp */
-  $handler->display->display_options['fields']['login_timestamp']['id'] = 'login_timestamp';
-  $handler->display->display_options['fields']['login_timestamp']['table'] = 'login_tracker';
-  $handler->display->display_options['fields']['login_timestamp']['field'] = 'login_timestamp';
-  $handler->display->display_options['fields']['login_timestamp']['label'] = 'You last logged in at';
-  $handler->display->display_options['fields']['login_timestamp']['date_format'] = 'long';
-  $handler->display->display_options['fields']['login_timestamp']['second_date_format'] = 'long';
+  /* Field: User: Last login */
+  $handler->display->display_options['fields']['login']['id'] = 'login';
+  $handler->display->display_options['fields']['login']['table'] = 'users';
+  $handler->display->display_options['fields']['login']['field'] = 'login';
+  $handler->display->display_options['fields']['login']['label'] = 'You last logged in at';
+  $handler->display->display_options['fields']['login']['date_format'] = 'long';
+  $handler->display->display_options['fields']['login']['second_date_format'] = 'long';
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: Current */
+  $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
+  $handler->display->display_options['filters']['uid_current']['table'] = 'users';
+  $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
+  $handler->display->display_options['filters']['uid_current']['value'] = '1';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
