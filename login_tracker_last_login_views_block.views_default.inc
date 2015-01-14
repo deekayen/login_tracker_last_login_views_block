@@ -15,14 +15,14 @@ function login_tracker_last_login_views_block_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'users';
-  $view->human_name = 'Last login';
+  $view->human_name = 'Login notifications';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Last login';
+  $handler->display->display_options['title'] = 'Login notifications';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
@@ -42,6 +42,13 @@ function login_tracker_last_login_views_block_views_default_views() {
   $handler->display->display_options['fields']['login']['label'] = 'You last logged in at';
   $handler->display->display_options['fields']['login']['date_format'] = 'long';
   $handler->display->display_options['fields']['login']['second_date_format'] = 'long';
+  /* Field: User: Additional login notifications text */
+  $handler->display->display_options['fields']['field_additional_login_notificat']['id'] = 'field_additional_login_notificat';
+  $handler->display->display_options['fields']['field_additional_login_notificat']['table'] = 'field_data_field_additional_login_notificat';
+  $handler->display->display_options['fields']['field_additional_login_notificat']['field'] = 'field_additional_login_notificat';
+  $handler->display->display_options['fields']['field_additional_login_notificat']['label'] = '';
+  $handler->display->display_options['fields']['field_additional_login_notificat']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_additional_login_notificat']['element_label_colon'] = FALSE;
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
