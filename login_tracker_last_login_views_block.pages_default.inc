@@ -78,7 +78,7 @@ This content is just a quick insert of custom content in the right side of a pan
 
 I set the path of the Panels page to /login_notifications, then set that as the front page so you\'d be able to see it right away for this test.
 
-The Login notifications display is from a Views block, which I used to list the last login based on the current logged in user. The permissions to hide the View from anonymous users is handled by the View rather than the Visibility rules on the panel. The collapsing is assisted by Ctools and https://www.drupal.org/project/panels_style_collapsible.
+The Login notifications display is from a Views block, which I used to list the last login based on the current logged in user. The permissions to hide the View from anonymous users is handled by the View rather than the Visibility rules on the panel. The collapsing is handled by a module I hacked up named Ten Seconds.
 
 A field I added to the user profile can be edited by each user to add a supplemental message per user. I changed it to be hidden from the user profile page by default since only the logged-in user should be able to see the contents of that field (through their Login notifications block) in the left pane of the panel.
 
