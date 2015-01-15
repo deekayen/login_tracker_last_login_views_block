@@ -33,7 +33,7 @@ function login_tracker_last_login_views_block_default_page_manager_pages() {
   $handler->weight = 0;
   $handler->conf = array(
     'title' => 'Front Panel',
-    'no_blocks' => 0,
+    'no_blocks' => 1,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
@@ -74,7 +74,7 @@ function login_tracker_last_login_views_block_default_page_manager_pages() {
       'title' => 'Login notifications test',
       'body' => 'Hi Jeannie.
 
-This content is just a quick insert of custom content in the right side of a panels pane. The Navigation and Management blocks to the left are standard blocks from Drupal core. I edited those blocks to show only on admin/* paths, then edited the custom layout I created in Panels to add them back to display on the left panel (fluid 30% width). Alternatively, I could have selected the "Disable Drupal blocks/regions" for the panel, but opted not to.
+This content is just a quick insert of custom content in the right side of a panels pane. The Navigation and Management blocks to the left are standard blocks from Drupal core. The "Disable Drupal blocks/regions" is hiding the blocks from displaying normally on this panel.
 
 I set the path of the Panels page to /login_notifications, then set that as the front page so you\'d be able to see it right away for this test.
 
