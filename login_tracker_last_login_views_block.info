@@ -1,4 +1,5 @@
 name = Login tracker last login views block
+description = Shows the last login of a user in the Sidebar First region of the Bartik theme
 core = 7.x
 package = Features
 dependencies[] = block
