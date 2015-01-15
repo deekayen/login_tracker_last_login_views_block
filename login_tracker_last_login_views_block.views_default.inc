@@ -28,11 +28,7 @@ function login_tracker_last_login_views_block_views_default_views() {
   $handler->display->display_options['access']['role'] = array(
     2 => '2',
   );
-  $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '3600';
-  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
-  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -68,7 +64,7 @@ function login_tracker_last_login_views_block_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_caching'] = '2';
+  $handler->display->display_options['block_caching'] = '-1';
   $export['last_login'] = $view;
 
   return $export;
