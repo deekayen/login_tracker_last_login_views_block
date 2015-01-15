@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Example module to collapse a specific element after 10 seconds.
+ */
+
+/**
+ * Implements hook_init().
+ */
+function tenseconds_init() {
+  drupal_add_js(drupal_get_path('module', 'tenseconds') . '/tenseconds.js');
+}
+

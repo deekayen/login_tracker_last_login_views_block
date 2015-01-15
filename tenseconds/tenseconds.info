@@ -1,0 +1,3 @@
+name = Ten Seconds
+description = Quick hack to hide a login notifications block after 10 seconds.
+core = 7.x

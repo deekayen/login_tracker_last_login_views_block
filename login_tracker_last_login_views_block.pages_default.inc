@@ -122,11 +122,8 @@ Here\'s a quick link to review the contents of this panel: https://phpdev.net/ad
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => array(
-        'pane_title' => 'Login notifications',
-        'pane_collapsed' => 0,
-      ),
-      'style' => 'collapsible',
+      'style' => 'default',
+      'settings' => NULL,
     );
     $pane->css = array();
     $pane->extras = array();
